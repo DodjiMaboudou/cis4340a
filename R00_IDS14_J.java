@@ -1,5 +1,4 @@
 public class SampleServlet extends HttpServlet {
-
   public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws IOException, ServletException {
     response.setContentType("text/html");
@@ -13,7 +12,7 @@ public class SampleServlet extends HttpServlet {
       out.println("Visible Parameter:");
       out.println( sanitize(visible));
       out.println("<br>Hidden Parameter:");
-      out.println(hidden);
+      out.println( sanitize(hidden));          // Hidden variable sanitized
     } else {
       out.println("<p>");
       out.print("<form action=\"");
